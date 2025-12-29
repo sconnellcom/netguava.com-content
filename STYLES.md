@@ -32,10 +32,10 @@ Each landing page should include `styles.css` and can add page-specific styles e
 <html lang="en">
 <head>
     <!-- Shared NetGuava Styles -->
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
     
     <!-- Page-specific Styles (optional) -->
-    <link rel="stylesheet" href="/my-page-styles.css">
+    <link rel="stylesheet" href="my-page-styles.css">
     
     <!-- Or inline page-specific styles -->
     <style>
