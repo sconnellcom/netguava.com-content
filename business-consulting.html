@@ -9,6 +9,109 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Page-specific Styles -->
     <style>
+        /* Header and Navigation Styles */
+        .site-header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .main-navigation {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-navigation a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .main-navigation a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Footer Styles */
+        .site-footer {
+            background-color: var(--text-dark);
+            color: var(--text-light);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-navigation {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0 0 2rem 0;
+            padding: 0;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-navigation a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-navigation a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-info {
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Navigation */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .main-navigation {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .footer-navigation {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
         /* Services Section - Page Specific */
         .services {
             max-width: 1200px;
@@ -107,6 +210,23 @@
     </style>
 </head>
 <body>
+    <!-- Site Header -->
+    <header id="site-header" class="site-header" role="banner">
+        <div class="header-content">
+            <a href="https://netguava.com/" class="site-logo" aria-label="Netguava Home">Netguava</a>
+            <nav id="site-navigation" role="navigation" aria-label="Main Navigation">
+                <ul class="main-navigation">
+                    <li><a href="https://netguava.com/">Home</a></li>
+                    <li><a href="https://netguava.com/about">About</a></li>
+                    <li><a href="https://netguava.com/business-consulting">Business Consulting</a></li>
+                    <li><a href="https://netguava.com/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main" class="site-main" role="main">
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -196,5 +316,24 @@
         <p>Let's discuss how our technology consulting can drive your business forward</p>
         <a href="https://netguava.com/contact" class="cta-button">Contact Us</a>
     </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer id="site-footer" class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <nav aria-label="Footer Navigation">
+                <ul class="footer-navigation">
+                    <li><a href="https://netguava.com/">Home</a></li>
+                    <li><a href="https://netguava.com/about">About</a></li>
+                    <li><a href="https://netguava.com/business-consulting">Business Consulting</a></li>
+                    <li><a href="https://netguava.com/contact">Contact</a></li>
+                    <li><a href="https://netguava.com/privacy-policy">Privacy Policy</a></li>
+                </ul>
+            </nav>
+            <div class="footer-info">
+                <p>&copy; 2025 Netguava. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
