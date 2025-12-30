@@ -1,16 +1,6 @@
 [
   {
     "wp_slug": "/business-consulting",
-    "template": "",
-    "source_path": "/business-consulting.html"
-  },
-  {
-    "wp_slug": "/business-consulting-2",
-    "template": "",
-    "source_path": "/business-consulting.html"
-  },
-  {
-    "wp_slug": "/business-consulting-3",
     "source_path": "/business-consulting.html"
   }
 ]
