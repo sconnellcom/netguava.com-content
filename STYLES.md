@@ -1,11 +1,11 @@
-# NetGuava Styles Guide
+# Netguava Styles Guide
 
-This guide explains the CSS architecture for NetGuava landing pages.
+This guide explains the CSS architecture for Netguava landing pages.
 
 ## File Structure
 
 ### `styles.css` - Shared Stylesheet
-This is the main stylesheet that contains common styles used across all NetGuava landing pages.
+This is the main stylesheet that contains common styles used across all Netguava landing pages.
 
 **What's included:**
 - CSS Reset and base styles
@@ -31,7 +31,7 @@ Each landing page should include `styles.css` and can add page-specific styles e
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Shared NetGuava Styles -->
+    <!-- Shared Netguava Styles -->
     <link rel="stylesheet" href="styles.css">
     
     <!-- Page-specific Styles (optional) -->
@@ -62,9 +62,9 @@ Each landing page should include `styles.css` and can add page-specific styles e
 
 The following CSS variables are available for use:
 
-- `--primary-color: #2d5f3f` - NetGuava dark green
-- `--secondary-color: #4a8c5f` - NetGuava medium green
-- `--accent-color: #6fb88a` - NetGuava light green
+- `--primary-color: #2d5f3f` - Netguava dark green
+- `--secondary-color: #4a8c5f` - Netguava medium green
+- `--accent-color: #6fb88a` - Netguava light green
 - `--text-dark: #1a3329` - Dark text
 - `--text-light: #f5f5f5` - Light text
 - `--bg-light: #fafafa` - Light background
