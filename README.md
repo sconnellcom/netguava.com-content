@@ -4,7 +4,19 @@ Content repository for Netguava website. This repository contains static content
 
 ## Business Consulting Landing Page
 
-The `business-consulting.html` file is a professional landing page for Netguava's business technology consulting services.
+The business consulting pages provide professional landing pages for Netguava's business technology consulting services.
+
+### Files:
+
+- **`business-consulting.html`** - Content-only version (proxy: false)
+  - Contains only the main content (hero, services, features, CTA sections)
+  - No navigation header or footer
+  - Intended to be proxied by netguava.com which will wrap it with its own header/footer
+
+- **`business-consulting-proxy.html`** - Standalone version (proxy: true)
+  - Complete standalone HTML page
+  - Includes full navigation header and footer
+  - Can be used independently or proxied as a complete page
 
 ### Features:
 - Business automation consulting focus
@@ -15,4 +27,4 @@ The `business-consulting.html` file is a professional landing page for Netguava'
 - SEO optimized with proper meta tags
 
 ### Usage:
-This file can be accessed by configuring the netguava.com website to proxy content from this GitHub repository.
+These files are configured in `index.json` and accessed by configuring the netguava.com website to proxy content from this GitHub repository.
