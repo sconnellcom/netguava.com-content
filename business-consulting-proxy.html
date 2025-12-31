@@ -22,9 +22,15 @@
             margin-top: 53px; /* Account for fixed header */
         }
         
+        /* Navigation Header Background */
+        .navigation-header {
+            background-color: #ffffff !important;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
         /* Footer Styles from Netguava theme */
         .footer {
-            background-color: #1E242C;
+            background-color: #1E242C !important;
             color: #E6E9ED;
             font-size: 14px;
         }
@@ -32,7 +38,7 @@
         .tag-line {
             padding: 20px 0;
             text-align: center;
-            background-color: #16191C;
+            background-color: #16191C !important;
             color: #E6E9ED;
         }
         
@@ -247,6 +253,38 @@
             border-top: 4px dashed;
             border-right: 4px solid transparent;
             border-left: 4px solid transparent;
+        }
+        
+        /* Fix logo sizing */
+        .nav-logo svg {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        /* Add hover effects to non-dropdown nav items */
+        .nav-left > li > a:hover {
+            color: #2ECC71;
+        }
+        
+        /* Hide search box */
+        .nav-search-widget {
+            display: none !important;
+        }
+        
+        /* Fix contact icon */
+        .contact-nav .fui-mail {
+            font-size: 16px;
+        }
+        
+        /* Fix login icon */
+        .fui-lock {
+            font-size: 16px;
+        }
+        
+        /* Fix social media icons in footer */
+        .bottom-menu-iconic-list .fui-facebook,
+        .bottom-menu-iconic-list .fui-linkedin {
+            font-size: 20px;
         }
     </style>
     
