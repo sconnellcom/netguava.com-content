@@ -3,5 +3,10 @@
     "wp_slug": "/business-consulting",
     "source_path": "/business-consulting.html",
     "proxy": false
+  },
+  {
+    "wp_slug": "/business-consulting-proxy",
+    "source_path": "/business-consulting-proxy.html",
+    "proxy": true
   }
 ]
