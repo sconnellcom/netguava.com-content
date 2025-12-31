@@ -5,113 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Technology Consulting | Netguava</title>
     <meta name="description" content="Transform your business with our expert automation solutions using cutting-edge database and web technologies.">
+    
+    <!-- External Netguava Styles -->
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/bootstrap-optimized.css?ver=0.1" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/flat-ui-pro-optimized.css?ver=0.1" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/nav-icons.css?ver=0.23" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/nav.css?ver=1.1" type="text/css" media="all" />
+    
     <!-- Shared Netguava Styles -->
     <link rel="stylesheet" href="styles.css">
+    
     <!-- Page-specific Styles -->
     <style>
-        /* Header and Navigation Styles */
-        .site-header {
-            background-color: var(--bg-white);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        /* Additional page adjustments */
+        body {
+            margin-top: 53px; /* Account for fixed header */
         }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        
+        /* Footer Styles from Netguava theme */
+        .footer {
+            background-color: #1E242C;
+            color: #E6E9ED;
+            font-size: 14px;
         }
-
-        .site-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .main-navigation {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .main-navigation a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .main-navigation a:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Footer Styles */
-        .site-footer {
-            background-color: var(--text-dark);
-            color: var(--text-light);
-            padding: 3rem 2rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-navigation {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            margin: 0 0 2rem 0;
-            padding: 0;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .footer-navigation a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-navigation a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer-info {
+        
+        .tag-line {
+            padding: 20px 0;
             text-align: center;
-            font-size: 0.9rem;
-            opacity: 0.8;
+            background-color: #16191C;
+            color: #E6E9ED;
         }
-
-        /* Responsive Navigation */
+        
+        .tag-line img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .tag-line a {
+            color: #0088FF;
+            text-decoration: none;
+        }
+        
+        .tag-line a:hover {
+            color: #2ECC71;
+        }
+        
+        .bottom-menu {
+            padding: 40px 0;
+        }
+        
+        .call-to-action {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #E6E9ED;
+        }
+        
+        .bottom-menu-brand img {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        .bottom-menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .bottom-menu-list li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        
+        .bottom-menu-list a {
+            color: #E6E9ED;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .bottom-menu-list a:hover {
+            color: #2ECC71;
+        }
+        
+        .bottom-menu-iconic-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+        
+        .bottom-menu-iconic-list li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+        
+        .bottom-menu-iconic-list a {
+            color: #E6E9ED;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        
+        .bottom-menu-iconic-list a:hover {
+            color: #0088FF;
+        }
+        
+        .footer-privacy-link {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer-privacy-link a {
+            color: #E6E9ED;
+            text-decoration: none;
+        }
+        
+        .footer-privacy-link a:hover {
+            color: #2ECC71;
+        }
+        
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .main-navigation {
-                flex-direction: column;
-                gap: 1rem;
+            .bottom-menu-col-1,
+            .bottom-menu-col-2,
+            .bottom-menu-col-3 {
                 text-align: center;
+                margin-bottom: 20px;
             }
-
-            .footer-navigation {
-                flex-direction: column;
-                gap: 1rem;
+            
+            .bottom-menu-iconic-list {
                 text-align: center;
             }
         }
-
+        
         /* Services Section - Page Specific */
         .services {
             max-width: 1200px;
@@ -207,26 +236,135 @@
             margin-bottom: 2rem;
             opacity: 0.95;
         }
+        
+        /* Nav caret for dropdown */
+        .nav-caret {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: 2px;
+            vertical-align: middle;
+            border-top: 4px dashed;
+            border-top: 4px solid \9;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+        }
     </style>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <!-- Site Header -->
-    <header id="site-header" class="site-header" role="banner">
-        <div class="header-content">
-            <a href="https://netguava.com/" class="site-logo" aria-label="Netguava Home">Netguava</a>
-            <nav id="site-navigation" role="navigation" aria-label="Main Navigation">
-                <ul class="main-navigation">
-                    <li><a href="https://netguava.com/">Home</a></li>
-                    <li><a href="https://netguava.com/about">About</a></li>
-                    <li><a href="https://netguava.com/business-consulting">Business Consulting</a></li>
-                    <li><a href="https://netguava.com/contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Main Content -->
-    <main id="main" class="site-main" role="main">
+<div id="page" class="site">
+
+    <!-- Navigation Header (from netguava.com/404) -->
+    <div class="navigation-header">
+      <div class="container">
+
+        <a href="/" class="nav-logo" aria-label="Netguava">
+<svg id="netguava-logo-svg" xmlns="http://www.w3.org/2000/svg" version="1" width="1293" height="267" viewBox="0 0 1293 267" preserveAspectRatio="xMidYMid meet">
+  <metadata>
+    Netguava Logo
+  </metadata>
+  <g class="netguava-logo-shapes nav-logo-path" transform="translate(0.000000,267.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+    <path d="M1998 2552c-32-101-533-1669-558-1745l-9-27 236 2 237 3 52 160c29 88 164 506 300 930 135 424 249 776 251 783 4 9-47 12-233 12l-239 0-37-118zM5800 2459c-90-55-170-105-177-111-9-8-13-47-13-144l0-134-80 0-80 0 0-145 0-145 80 0 80 0 0-387c0-214 5-419 10-458 28-193 127-266 360-266 94 0 127 5 238 37 26 7 26 3 7 169-8 72-15 131-15 132 0 0-21-5-47-13-76-23-135-19-164 12l-24 26-3 374-3 374 121 0 120 0 0 145 0 145-120 0-120 0-2 245-3 245-165-101zM1290 2225c-14-36-293-900-455-1410-76-236-140-436-142-443-4-10 44-12 232-10l237 3 108 335c278 860 490 1525 490 1537 0 10-47 13-230 13l-230 0-10-25zM12176 2100c-89-10-172-33-230-62-52-27-128-99-166-158-31-48-76-167-67-176 5-5 320-65 322-61 1 1 9 21 20 45 43 100 143 145 278 124 77-12 110-29 137-74 22-37 34-99 25-127-8-26-109-59-295-96-237-48-347-92-425-170-56-56-82-107-97-194-23-135 26-297 113-376 113-102 316-140 482-90 67 20 147 63 200 107 27 22 50 39 51 37 2-2 12-31 23-64l20-60 180-3 181-2-25 62c-46 112-52 184-53 578 0 386-7 473-41 545-45 95-151 167-294 198-92 20-241 27-339 17zm320-796c11-61-4-174-31-231-43-86-127-135-235-136-41 0-76 5-95 15-135 72-132 245 4 300 26 11 315 85 338 87 7 1 15-15 19-35zM3481 2085c-81-23-148-63-223-134l-68-63 0 91 0 91-165 0-165 0 0-685 0-685 179 0 180 0 3 437c3 377 6 445 21 488 24 71 67 119 143 156 139 68 262 28 311-101 15-40 18-100 21-512l3-468 180 0 180 0-3 533c-3 526-4 533-26 597-30 84-66 136-127 182-82 62-143 81-275 85-80 2-131-2-169-12zM4651 2084c-205-55-360-221-423-453-31-113-31-369 0-496 61-244 202-393 427-451 93-24 284-24 375-1 179 47 301 156 384 345 11 23 17 45 14 48-4 3-317 60-354 64-1 0-9-21-19-47-10-25-37-65-60-88-145-145-390-22-421 213l-7 52 350 0c193 0 392 3 443 7l93 6-7 111c-15 255-74 417-199 541-78 78-157 123-262 150-76 19-261 19-334-1zm256-279c93-28 159-120 178-248l7-47-256 0-256 0 0 35c0 83 60 195 126 236 67 41 121 48 201 24zM6647 2085c-279-79-434-359-414-745 8-142 27-219 82-335 94-196 258-305 458-305 137 0 235 40 340 139l70 66-6-145c-7-166-16-207-58-254-38-44-96-67-186-73-127-10-226 32-239 101-5 30-10 35-42 40-43 7-353 46-364 46-5 0-8-26-8-57 1-200 113-329 340-390 96-26 447-26 540 0 196 56 294 151 340 332 33 128 40 301 40 946l0 619-170 0-170 0 0-87 0-86-69 66c-46 44-93 78-138 100-63 29-77 32-183 34-74 1-132-3-163-12zm383-315c93-59 139-159 147-317 9-167-20-273-99-359-110-120-268-126-377-14-138 142-131 537 11 666 88 79 217 89 318 24zM9511 2085c-148-33-262-114-324-233-32-61-61-142-53-149 1-2 65-14 142-29 76-14 148-27 160-30 17-4 24 2 34 28 40 101 105 142 230 143 150 0 206-43 217-166l6-57-66-21c-37-11-143-36-238-56-311-66-415-121-486-258-23-44-28-68-31-153-5-118 12-191 60-266 131-207 500-235 723-54 64 51 61 52 85-19l22-65 178 0 179 0-18 43c-51 118-55 168-57 577 0 212-4 412-8 445-23 179-124 277-329 319-95 20-336 20-426 1zm399-952c-15-73-61-130-134-167-124-64-249-36-302 66-20 39-18 117 6 155 28 46 83 70 270 117l165 41 3-79c2-43-2-103-8-133zM7743 1563c5-553 8-592 63-694 35-64 110-134 177-164 73-34 183-48 272-36 131 19 207 55 305 147l70 66 0-91 0-91 165 0 165 0 0 685 0 685-179 0-180 0-3-442c-4-389-6-449-22-496-44-136-229-221-350-162-25 12-55 34-66 50-45 64-51 118-57 598l-6 452-179 0-180 0 5-507zM10329 2023c10-27 130-335 267-685l249-638 165 0 165 0 257 668c142 367 260 675 264 685 6 16-7 17-180 17-184 0-187 0-196-22-19-45-258-715-286-800l-28-88-36 118c-20 64-67 200-103 302-37 102-91 253-121 335l-54 150-191 3-191 2 19-47zM455 1618c-8-22-135-492-135-500 0-4 117-8 259-8l260 0 15 53c8 28 38 140 67 247 28 107 54 201 56 207 4 10-50 13-256 13-200 0-263-3-266-12zM130 596c0-3-29-113-65-244-36-132-65-250-65-261 0-21 2-21 257-19l257 3 68 250c37 138 68 256 68 263 0 9-59 12-260 12-143 0-260-2-260-4z"></path>
+  </g>
+</svg>
+        </a>
+
+        <ul class="nav-left hidden-xs hidden-sm">
+          <li class="dropdown">
+            <a data-toggle="dropdown">
+              <span class="nav-caret"></span>
+              &nbsp;Services
+            </a>
+            <ul class="sub-menu">
+			  <li><a href="https://netguava.com/wordpress-support">Wordpress Support</a></li>
+              <li><a href="https://netguava.com/website-development">Website Design &amp; Development</a></li>
+              <li><a href="https://netguava.com/online-marketing">Online Marketing</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://netguava.com/portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="https://netguava.com/about">About</a>
+          </li>
+		 </ul>
+        <ul class="nav-right">
+          <li class="hidden-xs">
+            <div class="nav-search-widget closed">
+              <div class="MiniSearch">
+                <form action="/">
+                  <input type="text" name="s" />
+                  <a class="fui-search submit-MiniSearch" href="javascript:void(0);" aria-label="Search Submit"></a>
+                </form>
+              </div>
+              <a class="show-MiniSearch" href="javascript:void(0);" aria-label="Search Toggle">
+				<span class="fui-search"></span>
+			  </a>
+            </div>
+          </li>
+          <li class="contact-nav">
+            <a href="https://netguava.com/contact">
+              <span class="fui-mail"></span>
+              &nbsp; Contact
+            </a>
+          </li>
+          <li class="dropdown">
+            <a class="nav-toggle" data-toggle="dropdown">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <ul class="sub-menu" style="margin-left: -228px;">
+			  <li><a href="https://netguava.com/wordpress-support">Wordpress Support</a></li>
+              <li><a href="https://netguava.com/website-development">Website Design &amp; Development</a></li>
+              <li><a href="https://netguava.com/online-marketing">Online Marketing</a></li>
+              <li><a href="https://netguava.com/portfolio">Portfolio</a></li>
+              <li><a href="https://netguava.com/about">About</a></li>
+              <li>
+                <a href="https://console.netguava.com">
+                  <span class="fui-lock"></span>
+                  &nbsp; Log In
+                </a>
+              </li>
+              <li class="menu-item-phone">
+                <a href="tel:8008618784">
+                  <span class="contact-icon">
+<svg xmlns="http://www.w3.org/2000/svg" version="1" width="100%" height="100%" viewBox="0 0 626 626" preserveAspectRatio="xMidYMid meet">
+  <metadata>
+    Phone
+  </metadata>
+  <g transform="translate(0.000000,626.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+    <path d="M1150 6239c-33-15-123-98-332-307-159-158-288-291-288-297 0-5 322-332 716-726l715-715 282 283c157 158 294 305 309 331 34 57 38 147 10 200-29 53-1190 1211-1237 1233-52 24-119 24-175-2zM215 5327c-116-155-174-314-204-556-27-215 1-514 79-821 58-230 133-425 255-665 143-280 269-478 514-805 132-176 146-194 270-343 182-218 543-595 776-808 235-215 549-465 835-663 76-53 357-230 375-237 6-2 67-34 136-72 484-258 1089-396 1524-347 228 26 458 113 545 205l24 26-739 739-740 739-75-20c-108-29-269-29-373 0-134 37-199 76-340 202-421 381-780 737-1072 1064-44 49-101 112-126 140-104 116-145 186-181 312-29 104-29 265 0 373l20 75-736 738c-405 405-741 737-747 737-6 0-15-6-20-13zM4820 2563c-19-9-156-137-305-283-148-147-283-276-299-289l-30-22 719-719c396-396 722-720 725-720 3 0 139 132 302 294 256 255 298 301 312 342 19 56 20 84 5 139-9 34-97 126-607 638-331 332-614 607-634 618-47 24-139 25-188 2z">
+    </path>
+  </g>
+</svg>
+                  </span>
+                  <span class="contact-number">(800) 861-8784</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://netguava.com/contact">
+                  <span class="fui-mail"></span>
+                  &nbsp; Contact
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+	
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -316,24 +454,62 @@
         <p>Let's discuss how our technology consulting can drive your business forward</p>
         <a href="https://netguava.com/contact" class="cta-button">Contact Us</a>
     </section>
-    </main>
+    
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
-    <!-- Site Footer -->
-    <footer id="site-footer" class="site-footer" role="contentinfo">
-        <div class="footer-content">
-            <nav aria-label="Footer Navigation">
-                <ul class="footer-navigation">
-                    <li><a href="https://netguava.com/">Home</a></li>
-                    <li><a href="https://netguava.com/about">About</a></li>
-                    <li><a href="https://netguava.com/business-consulting">Business Consulting</a></li>
-                    <li><a href="https://netguava.com/contact">Contact</a></li>
-                    <li><a href="https://netguava.com/privacy-policy">Privacy Policy</a></li>
-                </ul>
-            </nav>
-            <div class="footer-info">
-                <p>&copy; 2025 Netguava. All rights reserved.</p>
+	</div><!-- #content -->
+	
+	<!-- Footer (from netguava.com/404) -->
+	<footer class="footer site-footer" role="contentinfo">
+      <div class="tag-line"><img src="https://netguava.com/wp-content/themes/netguava/images/stephen-headshot.jpg" alt="Photo of Stephen" /> Need Help? &nbsp; Give us a call at <a href="tel:18008618784">(800) 861-8784</a></div>
+      <div class="bottom-menu">
+        <div class="container">
+          <div class="row">
+            <div class="call-to-action">Website Design, Development, and Online Marketing</div>
+          </div>
+          <div class="row">
+            <div class="col-md-2 col-sm-3 bottom-menu-col-1">
+              <a href="/" class="bottom-menu-brand"><img src="https://netguava.com/wp-content/themes/netguava/images/Netguava_Logo_2015.svg" alt="Netguava Logo" title="Netguava"></a>
             </div>
+            <div class="col-md-8 col-sm-7 bottom-menu-col-2">
+              <ul class="bottom-menu-list">
+                <li><a href="https://netguava.com/contact">Contact Us</a></li>
+                <li><a href="https://netguava.com/about">About Us</a></li>
+                <li><a href="https://netguava.com/portfolio">Portfolio</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 bottom-menu-col-3">
+              <ul class="bottom-menu-iconic-list">
+				<li><span class="footer-privacy-link"><a href="https://netguava.com/privacy-policy">Privacy</a></span></li>
+                <li><a href="https://www.facebook.com/netguava" class="fui-facebook" alt="Facebook" title="Facebook Profile"></a></li>
+                <li><a href="https://www.linkedin.com/company/netguava" class="fui-linkedin" alt="LinkedIn" title="LinkedIn Profile"></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div> <!-- /bottom-menu -->
     </footer>
+	
+</div><!-- #page -->
+
+<script>
+// Navigation search widget toggle
+$(document).ready(function() {
+    $('.show-MiniSearch').on('click', function(e) {
+        e.preventDefault();
+        $('.nav-search-widget').toggleClass('open closed');
+        if ($('.nav-search-widget').hasClass('open')) {
+            $('.MiniSearch input').focus();
+        }
+    });
+    
+    $('.submit-MiniSearch').on('click', function(e) {
+        e.preventDefault();
+        $('.MiniSearch form').submit();
+    });
+});
+</script>
+
 </body>
 </html>
