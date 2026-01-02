@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Platform for IT & Developers | Netguava</title>
+    <meta name="description" content="Empower marketing teams to update content while freeing developers to focus on core applications. Modern content management for IT departments.">
+    
+    <!-- External Netguava Styles -->
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/bootstrap-optimized.css?ver=0.1" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/flat-ui-pro-optimized.css?ver=0.1" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/nav-icons.css?ver=0.23" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/nav.css?ver=1.1" type="text/css" media="all" />
+    
+    <!-- Shared Netguava Styles -->
+    <link rel="stylesheet" href="https://sconnellcom.github.io/netguava.com-content/styles.css">
+    
+    <!-- Page-specific Styles -->
+    <style>
+        /* Additional page adjustments */
+        body {
+            margin-top: 0; /* No fixed header */
+        }
+        
+        /* Problem & Solution Sections */
+        .problem-section,
+        .solution-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+        
+        .problem-section {
+            background-color: var(--bg-light);
+        }
+        
+        .section-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .section-content h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-content h3 {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-content p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* How It Works Section */
+        .how-it-works {
+            padding: 5rem 2rem;
+        }
+        
+        .how-it-works-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background-color: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-card p {
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background-color: var(--bg-light);
+            padding: 5rem 2rem;
+        }
+        
+        .benefits-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+        }
+        
+        .benefit-icon {
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        
+        .benefit-content h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .benefit-content p {
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        /* Why IT Loves It Section */
+        .it-loves-section {
+            padding: 5rem 2rem;
+        }
+        
+        .it-loves-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .it-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .it-feature-card {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .it-feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        
+        .it-feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .it-feature-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .it-feature-card p {
+            line-height: 1.6;
+            opacity: 0.95;
+            font-size: 1rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+            color: var(--text-light);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button-secondary {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .cta-button-secondary:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="page" class="site">
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unlock Effortless Content Updates – Empower Marketing, Free Your Developers</h1>
+            <p>Modernize content workflow so marketers and designers can quickly update site content, while your IT team stays focused on what matters most</p>
+            <a href="https://netguava.com/contact" class="cta-button">Request a Demo</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="section-content">
+            <div class="section-icon" aria-label="Alert icon">⚠️</div>
+            <h2>The Problem</h2>
+            <h3>Developers Are Stretched Thin</h3>
+            <p>IT and development teams are dedicated to building and maintaining core business applications, not chasing every content change request from other departments. Routine content updates and marketing campaigns turn into a development backlog, slowing down releases and frustrating both stakeholders and end users.</p>
+            <p>Every time marketing needs to update a banner, change copy, or launch a campaign, it creates a ticket for developers. This constant context-switching drains productivity and delays mission-critical projects.</p>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="section-content">
+            <div class="section-icon" aria-label="Solution icon">💡</div>
+            <h2>The Solution</h2>
+            <h3>A Content Platform That Bridges the Gap</h3>
+            <p>Our solution frees your developers from routine content changes by empowering business users—marketing, design, and other departments—to update site content visually, without needing code or technical training.</p>
+            <p>Developers retain control over core architecture and advanced integrations, while non-technical teams get the autonomy they crave. It's the perfect balance between flexibility and governance.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="how-it-works-content">
+            <h2 class="section-title">How It Works</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-label="Edit icon">✏️</div>
+                    <h4>No-Code Content Editing</h4>
+                    <p>Marketing and design teams update content visually through an intuitive interface. No HTML, CSS, or deployment knowledge required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-label="Control icon">🎛️</div>
+                    <h4>Full Developer Control</h4>
+                    <p>IT maintains complete control over structure, integrations, workflows, and code. Define components, templates, and rules.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-label="Security icon">🔒</div>
+                    <h4>Secure, Permission-Based Access</h4>
+                    <p>Role-based permissions ensure each team member has appropriate access. Enterprise-grade security and compliance standards.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-label="Publish icon">🚀</div>
+                    <h4>Seamless Publishing</h4>
+                    <p>Version history and rollback capabilities. Preview changes before publishing. Scheduled releases for campaigns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-label="Integration icon">🔌</div>
+                    <h4>Integrates With Your Stack</h4>
+                    <p>Works seamlessly with .NET, React, AWS, Azure, and your existing infrastructure. API-first architecture for flexibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="benefits-section">
+        <div class="benefits-content">
+            <h2 class="section-title">Key Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon" aria-label="Reduce icon">📉</div>
+                    <div class="benefit-content">
+                        <h4>Reduce Developer Workload and Backlog</h4>
+                        <p>Free developers from content update requests so they can focus on building features that drive business value and innovation.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon" aria-label="Speed icon">⚡</div>
+                    <div class="benefit-content">
+                        <h4>Speed Up Campaign Launches</h4>
+                        <p>Marketing can launch campaigns and update content immediately without waiting for development cycles or deployment windows.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon" aria-label="Cost icon">💰</div>
+                    <div class="benefit-content">
+                        <h4>Lower IT Costs, Fewer Support Tickets</h4>
+                        <p>Reduce operational costs by eliminating content-related support tickets and streamlining the content management workflow.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon" aria-label="Collaboration icon">🤝</div>
+                    <div class="benefit-content">
+                        <h4>Improve Collaboration Company-Wide</h4>
+                        <p>Break down silos between IT, marketing, and design teams. Everyone works together more efficiently with clear boundaries.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon" aria-label="Governance icon">✅</div>
+                    <div class="benefit-content">
+                        <h4>Maintain Governance and Security</h4>
+                        <p>Keep full control over architecture, security, and compliance while empowering other teams to work independently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why IT Loves It Section -->
+    <section class="it-loves-section">
+        <div class="it-loves-content">
+            <h2 class="section-title">Why IT and Developers Love It</h2>
+            <div class="it-features-grid">
+                <div class="it-feature-card">
+                    <div class="it-feature-icon" aria-label="Focus icon">🎯</div>
+                    <h4>Stay Focused on Mission-Critical Work</h4>
+                    <p>No more interruptions for simple content changes. Spend time on applications that drive revenue and competitive advantage.</p>
+                </div>
+                <div class="it-feature-card">
+                    <div class="it-feature-icon" aria-label="API icon">🔧</div>
+                    <h4>RESTful APIs, Webhooks, Custom Components</h4>
+                    <p>Build exactly what you need with flexible APIs, custom components, and webhooks. Integrate with any system or workflow.</p>
+                </div>
+                <div class="it-feature-card">
+                    <div class="it-feature-icon" aria-label="Automate icon">🤖</div>
+                    <h4>Automate Tedious Tasks</h4>
+                    <p>Eliminate manual deployment steps and content-related workflows. Set up automated workflows and reduce distractions.</p>
+                </div>
+                <div class="it-feature-card">
+                    <div class="it-feature-icon" aria-label="Cloud icon">☁️</div>
+                    <h4>Scalable and Cloud-Ready</h4>
+                    <p>Built for modern infrastructure. Works seamlessly with AWS, Azure, and on-premises environments. Scales with your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to See How We Unlock Time for Your Development Team?</h2>
+        <p>Let's show you how our content platform can transform your workflow and free your developers to focus on what they do best</p>
+        <div class="cta-buttons">
+            <a href="https://netguava.com/contact" class="cta-button">Request a Demo</a>
+            <a href="https://netguava.com/contact" class="cta-button-secondary">Contact for Technical Deep-Dive</a>
+        </div>
+    </section>
+    
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	</div><!-- #content -->
+	
+</div><!-- #page -->
+
+</body>
+</html>
