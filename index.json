@@ -8,5 +8,15 @@
     "wp_slug": "/business-consulting-proxy",
     "source_path": "/business-consulting-proxy.html",
     "proxy": true
+  },
+  {
+    "wp_slug": "/content-platform",
+    "source_path": "/content-platform.html",
+    "proxy": false
+  },
+  {
+    "wp_slug": "/content-platform-proxy",
+    "source_path": "/content-platform-proxy.html",
+    "proxy": true
   }
 ]
