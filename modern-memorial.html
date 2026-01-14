@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Memorial Services | Netguava</title>
+    <meta name="description" content="Create lasting digital memories with our modern memorial platform. Beautiful, personalized tributes that celebrate lives lived and preserve precious memories forever.">
+    
+    <!-- External Netguava Styles -->
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/bootstrap-optimized.css?ver=0.1" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/flat-ui-pro-optimized.css?ver=0.1" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/nav-icons.css?ver=0.23" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/nav.css?ver=1.1" type="text/css" media="all" />
+    
+    <!-- Shared Netguava Styles -->
+    <link rel="stylesheet" href="https://sconnellcom.github.io/netguava.com-content/styles.css">
+    
+    <!-- Page-specific Styles -->
+    <style>
+        /* Additional page adjustments */
+        body {
+            margin-top: 0; /* No fixed header */
+        }
+        
+        /* Memorial-specific color overrides for a softer, more respectful palette */
+        :root {
+            --memorial-primary: #4a5568;
+            --memorial-secondary: #718096;
+            --memorial-accent: #a0aec0;
+            --memorial-light: #e2e8f0;
+        }
+        
+        /* Hero Section - Memorial Theme */
+        .hero {
+            background: linear-gradient(135deg, var(--memorial-primary) 0%, var(--memorial-secondary) 100%);
+            padding: 8rem 2rem;
+        }
+        
+        /* Services Section - Page Specific */
+        .services {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            background-color: var(--bg-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--memorial-accent);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            color: var(--memorial-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Features Section - Page Specific */
+        .features {
+            background-color: var(--memorial-light);
+            padding: 5rem 2rem;
+        }
+
+        .features-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            background-color: var(--bg-white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+
+        .feature-icon {
+            color: var(--memorial-secondary);
+            font-size: 1.8rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .feature-item h4 {
+            color: var(--memorial-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            line-height: 1.7;
+            color: var(--text-dark);
+            opacity: 0.85;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--bg-white);
+            padding: 5rem 2rem;
+        }
+
+        .testimonials-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--memorial-light);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--memorial-accent);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--memorial-primary);
+        }
+
+        /* CTA Section - Page Specific */
+        .cta-section {
+            background: linear-gradient(135deg, var(--memorial-secondary) 0%, var(--memorial-accent) 100%);
+            color: var(--text-light);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Override section title for memorial theme */
+        .section-title {
+            color: var(--memorial-primary);
+        }
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="page" class="site">
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Honoring Lives, Preserving Memories</h1>
+            <p>Create beautiful, lasting digital memorials that celebrate the lives of loved ones and keep their memories alive forever</p>
+            <a href="https://netguava.com/contact" class="cta-button">Create a Memorial</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Memorial Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon" aria-label="Digital memorial icon">🕊️</div>
+                <h3>Digital Memorial Pages</h3>
+                <p>Create personalized memorial pages with photos, videos, life stories, and memories. Share with family and friends around the world, accessible anytime, anywhere.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon" aria-label="Tribute wall icon">💬</div>
+                <h3>Tribute Walls</h3>
+                <p>Allow friends and family to share their memories, condolences, and stories. A collaborative space where everyone can contribute to celebrating a life well-lived.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon" aria-label="Photo gallery icon">📷</div>
+                <h3>Photo & Video Galleries</h3>
+                <p>Preserve precious moments with unlimited photo and video uploads. Organize memories by year, event, or theme to tell the complete story of a life.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon" aria-label="Timeline icon">📅</div>
+                <h3>Interactive Timelines</h3>
+                <p>Chronicle important life events, achievements, and milestones. Create a visual journey through the years that honors a complete life story.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon" aria-label="Candle icon">🕯️</div>
+                <h3>Virtual Memorial Services</h3>
+                <p>Host online memorial services and celebrations of life. Connect with those who cannot attend in person, ensuring everyone can participate in remembering.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon" aria-label="Forever icon">♾️</div>
+                <h3>Permanent Preservation</h3>
+                <p>Secure, permanent hosting with no expiration. Your memorial page will remain accessible for generations to come, preserving legacy and memory forever.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-content">
+            <h2 class="section-title">Why Choose Our Memorial Platform</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Easy to Create</h4>
+                        <p>Intuitive design tools make it simple to build beautiful memorial pages in minutes, no technical skills required</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Privacy Controls</h4>
+                        <p>Choose who can view and contribute to memorials with flexible privacy settings and moderation tools</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Mobile Friendly</h4>
+                        <p>Access memorials from any device, whether you're at home or on the go, with fully responsive design</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Secure & Reliable</h4>
+                        <p>Enterprise-grade security and redundant backups ensure your memories are safe and always accessible</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Compassionate Support</h4>
+                        <p>Our dedicated team is here to help you through every step with empathy and understanding</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Community Connection</h4>
+                        <p>Connect with others who are grieving, share support, and find comfort in community</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-content">
+            <h2 class="section-title">What Families Are Saying</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"This platform gave us a beautiful way to honor my mother's memory. Family members from around the world can visit and share their stories. It's been a source of comfort during a difficult time."</p>
+                    <p class="testimonial-author">— Sarah M.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Creating my father's memorial page was surprisingly easy during such an emotional time. The tribute wall has been amazing - we've learned so many stories about dad that we never knew."</p>
+                    <p class="testimonial-author">— Michael R.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The ability to preserve photos and videos in one place has been invaluable. My children will be able to know their grandmother through this memorial for years to come."</p>
+                    <p class="testimonial-author">— Jennifer K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <h2>Begin Creating a Lasting Tribute</h2>
+        <p>Honor your loved one with a beautiful digital memorial that preserves their legacy and brings comfort to family and friends</p>
+        <a href="https://netguava.com/contact" class="cta-button">Get Started</a>
+    </section>
+    
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	</div><!-- #content -->
+	
+</div><!-- #page -->
+
+</body>
+</html>

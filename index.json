@@ -18,5 +18,15 @@
     "wp_slug": "/content-platform-proxy",
     "source_path": "/content-platform-proxy.html",
     "proxy": true
+  },
+  {
+    "wp_slug": "/modern-memorial",
+    "source_path": "/modern-memorial.html",
+    "proxy": false
+  },
+  {
+    "wp_slug": "/modern-memorial-proxy",
+    "source_path": "/modern-memorial-proxy.html",
+    "proxy": true
   }
 ]
