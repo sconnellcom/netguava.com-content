@@ -69,6 +69,20 @@
             font-size: 1.1rem;
         }
         
+        /* Product description text */
+        .product-description {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+        
+        .product-description + .product-description {
+            margin-top: 1.5rem;
+        }
+        
         /* Services Section - Page Specific */
         .services {
             max-width: 1200px;
@@ -255,11 +269,11 @@
     <!-- Product Details Section -->
     <section class="services" id="services">
         <h2 class="section-title">Product Details</h2>
-        <div style="max-width: 900px; margin: 0 auto 3rem; text-align: center;">
-            <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-dark);">
+        <div>
+            <p class="product-description">
                 These durable, laser-engraved slate coasters combine natural beauty with modern functionality, featuring a scannable QR code linking directly to your loved one's ModernMemorial.org page, plus a heartfelt custom message.
             </p>
-            <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-dark); margin-top: 1.5rem;">
+            <p class="product-description">
                 Crafted from genuine natural slate, each coaster offers a one-of-a-kind look with subtle variations in texture and color. The laser engraving permanently etches the QR code and message in crisp gray, ensuring it withstands time while directing visitors to photos, videos, and stories.
             </p>
         </div>
