@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ModernMemorial.org - Honoring memories in the digital age | Netguava</title>
-    <meta name="description" content="Celebrate a life well-lived with a lasting digital memorial. Modern Memorial helps families and friends create timeless tributes blending tradition with technology.">
+    <title>Personalized Memorial Coasters with QR Code | ModernMemorial.org</title>
+    <meta name="description" content="Laser-engraved slate memorial coasters with custom QR codes. Link to digital tributes on headstones, plaques, or keepsakes. Durable, weather-resistant, and beautifully crafted.">
     
     <!-- External Netguava Styles -->
     <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/bootstrap-optimized.css?ver=0.1" type="text/css" media="all" />
@@ -30,10 +30,31 @@
             --memorial-light: #e2e8f0;
         }
         
-        /* Hero Section - Memorial Theme */
+        /* Hero Section - Memorial Theme with Background Image */
         .hero {
-            background: linear-gradient(135deg, var(--memorial-primary) 0%, var(--memorial-secondary) 100%);
+            background-image: url('https://github.com/user-attachments/assets/3ba201ef-6498-4790-9df9-eaecfa744ad3');
+            background-size: cover;
+            background-position: center;
             padding: 8rem 2rem;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            text-align: left;
+            margin: 0;
         }
         
         .hero-tagline {
@@ -224,47 +245,54 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>ModernMemorial.org</h1>
-            <p class="hero-tagline">Honoring memories in the digital age.</p>
-            <p>Celebrate a life well-lived with a lasting digital memorial.</p>
-            <p class="hero-subtitle">Modern Memorial helps families and friends create timeless tributes for their loved ones — blending tradition with technology.</p>
-            <a href="https://netguava.com/contact" class="cta-button">Create a Memorial</a>
+            <h1>Personalized Memorial Coasters with QR Code</h1>
+            <p class="hero-tagline">The perfect companion for lasting tributes.</p>
+            <p>Durable, laser-engraved slate coasters that combine natural beauty with modern functionality — featuring a scannable QR code linking directly to your loved one's ModernMemorial.org page.</p>
+            <a href="https://netguava.com/contact" class="cta-button">Order Now</a>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Product Details Section -->
     <section class="services" id="services">
-        <h2 class="section-title">Our Services</h2>
+        <h2 class="section-title">Product Details</h2>
+        <div style="max-width: 900px; margin: 0 auto 3rem; text-align: center;">
+            <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-dark);">
+                These durable, laser-engraved slate coasters combine natural beauty with modern functionality, featuring a scannable QR code linking directly to your loved one's ModernMemorial.org page, plus a heartfelt custom message.
+            </p>
+            <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-dark); margin-top: 1.5rem;">
+                Crafted from genuine natural slate, each coaster offers a one-of-a-kind look with subtle variations in texture and color. The laser engraving permanently etches the QR code and message in crisp gray, ensuring it withstands time while directing visitors to photos, videos, and stories.
+            </p>
+        </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon" aria-label="Digital memorial icon">🕊️</div>
-                <h3>Personalized Memorial Pages</h3>
-                <p>Share stories, photos, and videos that capture your loved one's journey. Create a beautiful digital space that celebrates their unique life and legacy.</p>
+                <div class="service-icon" aria-label="Natural slate icon">🪨</div>
+                <h3>Genuine Natural Slate</h3>
+                <p>Cut from genuine slate with authentic chipped edges. Each piece is unique with natural variations in texture and color.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon" aria-label="QR code icon">📱</div>
-                <h3>QR Code Memorials</h3>
-                <p>Place a custom QR code on headstones, plaques, or keepsakes — instantly linking visitors to a rich digital remembrance. Bridge the physical and digital worlds.</p>
+                <h3>Custom QR Code Engraving</h3>
+                <p>Laser-engraved QR code with your personal message links directly to your memorial page. Permanent and weather-resistant.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon" aria-label="Collaboration icon">🤝</div>
-                <h3>Collaborative Tributes</h3>
-                <p>Invite friends and family to contribute memories, messages, and media in one shared space. Build a collective celebration of life together.</p>
+                <div class="service-icon" aria-label="Placement icon">⚰️</div>
+                <h3>Versatile Placement Options</h3>
+                <p>Work with your headstone creator to have the QR code placed directly on the headstone, or attach this slate plaque to an existing headstone.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon" aria-label="Security icon">🔒</div>
-                <h3>Secure & Private</h3>
-                <p>You control access — public, invitation-only, or private viewing options. Your family's privacy and security are our top priority.</p>
+                <div class="service-icon" aria-label="Durability icon">💪</div>
+                <h3>Built to Last</h3>
+                <p>Scratch-resistant, food-safe coating protects the engraving. Includes 4 foam footpads on bottom for stability.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon" aria-label="Photo gallery icon">📷</div>
-                <h3>Photo & Video Galleries</h3>
-                <p>Preserve precious moments with unlimited photo and video uploads. Organize memories by year, event, or theme to tell the complete story of a life.</p>
+                <div class="service-icon" aria-label="Display icon">🏛️</div>
+                <h3>Multiple Uses</h3>
+                <p>Place on headstones, display tables, memorial services, or keep as keepsakes. Every scan keeps their memory alive.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon" aria-label="Forever icon">♾️</div>
-                <h3>Permanent Preservation</h3>
-                <p>Secure, permanent hosting with no expiration. Your memorial page will remain accessible for generations to come, preserving legacy and memory forever.</p>
+                <div class="service-icon" aria-label="Care icon">🧼</div>
+                <h3>Easy Maintenance</h3>
+                <p>Hand wash only to preserve the engraving and coating. Simple care for lasting beauty.</p>
             </div>
         </div>
     </section>
@@ -272,48 +300,48 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="features-content">
-            <h2 class="section-title">Why Choose Our Memorial Platform</h2>
+            <h2 class="section-title">Included with Your Memorial Coaster</h2>
             <div class="features-list">
                 <div class="feature-item">
                     <div class="feature-icon" aria-label="Checkmark">✓</div>
                     <div>
-                        <h4>Easy to Create</h4>
-                        <p>Intuitive design tools make it simple to build beautiful memorial pages in minutes, no technical skills required</p>
+                        <h4>Complete Digital Memorial Page</h4>
+                        <p>Your QR code links to a full ModernMemorial.org page where you can share unlimited photos, videos, and life stories</p>
                     </div>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon" aria-label="Checkmark">✓</div>
                     <div>
-                        <h4>Privacy Controls</h4>
-                        <p>Choose who can view and contribute to memorials with flexible privacy settings and moderation tools</p>
+                        <h4>Custom Engraving</h4>
+                        <p>Personalize your coaster with a heartfelt message alongside the QR code — permanently etched in crisp gray</p>
                     </div>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon" aria-label="Checkmark">✓</div>
                     <div>
-                        <h4>Mobile Friendly</h4>
-                        <p>Access memorials from any device, whether you're at home or on the go, with fully responsive design</p>
+                        <h4>Headstone Integration</h4>
+                        <p>Work with your headstone creator to embed the QR code directly, or use our slate plaque to add to existing memorials</p>
                     </div>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon" aria-label="Checkmark">✓</div>
                     <div>
-                        <h4>Secure & Reliable</h4>
-                        <p>Enterprise-grade security and redundant backups ensure your memories are safe and always accessible</p>
+                        <h4>Weather Resistant</h4>
+                        <p>Built for outdoor display with scratch-resistant coating that protects against the elements</p>
                     </div>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon" aria-label="Checkmark">✓</div>
                     <div>
-                        <h4>Compassionate Support</h4>
-                        <p>Our dedicated team is here to help you through every step with empathy and understanding</p>
+                        <h4>Family Collaboration</h4>
+                        <p>Invite friends and family to contribute memories and messages to the connected memorial page</p>
                     </div>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon" aria-label="Checkmark">✓</div>
                     <div>
-                        <h4>Community Connection</h4>
-                        <p>Connect with others who are grieving, share support, and find comfort in community</p>
+                        <h4>Forever Access</h4>
+                        <p>Permanent hosting with no expiration — your memorial page remains accessible for generations</p>
                     </div>
                 </div>
             </div>
@@ -343,9 +371,9 @@
 
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
-        <h2>Keep their story alive wherever their memory lives.</h2>
-        <p>Honor your loved one with a beautiful digital memorial that preserves their legacy and brings comfort to family and friends</p>
-        <a href="https://netguava.com/contact" class="cta-button">Get Started</a>
+        <h2>Order Your Personalized Memorial Coaster Today</h2>
+        <p>Every scan keeps their story alive wherever their memory lives — on headstones, display tables, or cherished keepsakes</p>
+        <a href="https://netguava.com/contact" class="cta-button">Order Now</a>
     </section>
     
 		</main><!-- #main -->
