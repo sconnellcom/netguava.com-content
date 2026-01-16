@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Memorial Coasters with QR Code | ModernMemorial.org</title>
+    <meta name="description" content="Laser-engraved slate memorial coasters with custom QR codes. Link to digital tributes on headstones, plaques, or keepsakes. Durable, weather-resistant, and beautifully crafted.">
+    
+    <!-- External Netguava Styles -->
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/bootstrap-optimized.css?ver=0.1" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/flat-ui-pro-optimized.css?ver=0.1" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/nav-icons.css?ver=0.23" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/nav.css?ver=1.1" type="text/css" media="all" />
+    
+    <!-- Shared Netguava Styles -->
+    <link rel="stylesheet" href="https://sconnellcom.github.io/netguava.com-content/styles.css">
+    
+    <!-- Page-specific Styles -->
+    <style>
+        /* Additional page adjustments */
+        body {
+            margin-top: 0; /* No fixed header */
+        }
+        
+        /* Memorial-specific color overrides for a softer, more respectful palette */
+        :root {
+            --memorial-primary: #4a5568;
+            --memorial-secondary: #718096;
+            --memorial-accent: #a0aec0;
+            --memorial-light: #e2e8f0;
+        }
+        
+        /* Hero Section - Memorial Theme with Background Image */
+        .hero {
+            background-image: url('https://github.com/user-attachments/assets/8358b47d-9f19-4169-9617-0e344838d1b7');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            text-align: left;
+            margin: 0;
+        }
+        
+        .hero-tagline {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem !important;
+            opacity: 1 !important;
+        }
+        
+        .hero-subtitle {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Product description text */
+        .product-description {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+        
+        .product-description + .product-description {
+            margin-top: 1.5rem;
+        }
+        
+        /* Services Section - Page Specific */
+        .services {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            background-color: var(--bg-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--memorial-accent);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            color: var(--memorial-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Features Section - Page Specific */
+        .features {
+            background-color: var(--memorial-light);
+            padding: 5rem 2rem;
+        }
+
+        .features-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background-color: var(--bg-white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+
+        .feature-icon {
+            color: var(--memorial-secondary);
+            font-size: 1.8rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .feature-item h4 {
+            color: var(--memorial-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            line-height: 1.7;
+            color: var(--text-dark);
+            opacity: 0.85;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--bg-white);
+            padding: 5rem 2rem;
+        }
+
+        .testimonials-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--memorial-light);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--memorial-accent);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--memorial-primary);
+        }
+
+        /* CTA Section - Page Specific */
+        .cta-section {
+            background: linear-gradient(135deg, var(--memorial-secondary) 0%, var(--memorial-accent) 100%);
+            color: var(--text-light);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Override section title for memorial theme */
+        .section-title {
+            color: var(--memorial-primary);
+        }
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="page" class="site">
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Personalized Memorial Coasters with QR Code</h1>
+            <p class="hero-tagline">The perfect companion for lasting tributes.</p>
+            <p>Durable, laser-engraved slate coasters that combine natural beauty with modern functionality — featuring a scannable QR code linking directly to your loved one's ModernMemorial.org page.</p>
+            <a href="https://netguava.com/contact" class="cta-button">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Product Details Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Product Details</h2>
+        <div>
+            <p class="product-description">
+                These durable, laser-engraved slate coasters combine natural beauty with modern functionality, featuring a scannable QR code linking directly to your loved one's ModernMemorial.org page, plus a heartfelt custom message.
+            </p>
+            <p class="product-description">
+                Crafted from genuine natural slate, each coaster offers a one-of-a-kind look with subtle variations in texture and color. The laser engraving permanently etches the QR code and message in crisp gray, ensuring it withstands time while directing visitors to photos, videos, and stories.
+            </p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon" aria-label="Natural slate icon">🪨</div>
+                <h3>Genuine Natural Slate</h3>
+                <p>Cut from genuine slate with authentic chipped edges. Each piece is unique with natural variations in texture and color.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon" aria-label="QR code icon">📱</div>
+                <h3>Custom QR Code Engraving</h3>
+                <p>Laser-engraved QR code with your personal message links directly to your memorial page. Permanent and weather-resistant.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon" aria-label="Placement icon">⚰️</div>
+                <h3>Versatile Placement Options</h3>
+                <p>Work with your headstone creator to have the QR code placed directly on the headstone, or attach this slate plaque to an existing headstone.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon" aria-label="Durability icon">💪</div>
+                <h3>Built to Last</h3>
+                <p>Scratch-resistant, food-safe coating protects the engraving. Includes 4 foam footpads on bottom for stability.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon" aria-label="Display icon">🏛️</div>
+                <h3>Multiple Uses</h3>
+                <p>Place on headstones, display tables, memorial services, or keep as keepsakes. Every scan keeps their memory alive.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon" aria-label="Care icon">🧼</div>
+                <h3>Easy Maintenance</h3>
+                <p>Hand wash only to preserve the engraving and coating. Simple care for lasting beauty.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-content">
+            <h2 class="section-title">Included with Your Memorial Coaster</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Complete Digital Memorial Page</h4>
+                        <p>Your QR code links to a full ModernMemorial.org page where you can share unlimited photos, videos, and life stories</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Custom Engraving</h4>
+                        <p>Personalize your coaster with a heartfelt message alongside the QR code — permanently etched in crisp gray</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Headstone Integration</h4>
+                        <p>Work with your headstone creator to embed the QR code directly, or use our slate plaque to add to existing memorials</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Weather Resistant</h4>
+                        <p>Built for outdoor display with scratch-resistant coating that protects against the elements</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Family Collaboration</h4>
+                        <p>Invite friends and family to contribute memories and messages to the connected memorial page</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" aria-label="Checkmark">✓</div>
+                    <div>
+                        <h4>Forever Access</h4>
+                        <p>Permanent hosting with no expiration — your memorial page remains accessible for generations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-content">
+            <h2 class="section-title">What Families Are Saying</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"This platform gave us a beautiful way to honor my mother's memory. Family members from around the world can visit and share their stories. It's been a source of comfort during a difficult time."</p>
+                    <p class="testimonial-author">— Sarah M.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Creating my father's memorial page was surprisingly easy during such an emotional time. The tribute wall has been amazing - we've learned so many stories about dad that we never knew."</p>
+                    <p class="testimonial-author">— Michael R.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The ability to preserve photos and videos in one place has been invaluable. My children will be able to know their grandmother through this memorial for years to come."</p>
+                    <p class="testimonial-author">— Jennifer K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <h2>Order Your Personalized Memorial Coaster Today</h2>
+        <p>Every scan keeps their story alive wherever their memory lives — on headstones, display tables, or cherished keepsakes</p>
+        <a href="https://netguava.com/contact" class="cta-button">Order Now</a>
+    </section>
+    
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	</div><!-- #content -->
+	
+</div><!-- #page -->
+
+</body>
+</html>
