@@ -32,7 +32,7 @@
         
         /* Hero Section - Memorial Theme with Background Image */
         .hero {
-            background-image: url('https://github.com/user-attachments/assets/8358b47d-9f19-4169-9617-0e344838d1b7');
+            background-image: url('https://github.com/user-attachments/assets/modern-memorial-hero-updated.jpg');
             background-size: cover;
             background-position: center;
             padding: 8rem 2rem;
@@ -242,6 +242,51 @@
         .section-title {
             color: var(--memorial-primary);
         }
+        
+        /* Photo Gallery Section */
+        .photo-gallery {
+            background-color: var(--bg-white);
+            padding: 5rem 2rem;
+        }
+        
+        .photo-gallery-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .photo-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .photo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .photo-caption {
+            padding: 1rem;
+            background-color: var(--memorial-light);
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--memorial-primary);
+        }
     </style>
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -320,7 +365,7 @@
                     <div class="feature-icon" aria-label="Checkmark">✓</div>
                     <div>
                         <h4>Complete Digital Memorial Page</h4>
-                        <p>Your QR code links to a full ModernMemorial.org page where you can share unlimited photos, videos, and life stories</p>
+                        <p>Your QR code links to a full ModernMemorial.org page where you can share photos, videos, and life stories</p>
                     </div>
                 </div>
                 <div class="feature-item">
@@ -357,6 +402,31 @@
                         <h4>Forever Access</h4>
                         <p>Permanent hosting with no expiration — your memorial page remains accessible for generations</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="photo-gallery" id="gallery">
+        <div class="photo-gallery-content">
+            <h2 class="section-title">See Our Memorial Coasters</h2>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="https://github.com/user-attachments/assets/memorial-coaster-1.jpg" alt="Memorial coaster with QR code on slate">
+                    <div class="photo-caption">Custom QR code engraved on natural slate</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://github.com/user-attachments/assets/memorial-coaster-2.jpg" alt="Memorial coaster on headstone">
+                    <div class="photo-caption">Displayed on a memorial headstone</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://github.com/user-attachments/assets/memorial-coaster-3.jpg" alt="Close-up of engraved QR code">
+                    <div class="photo-caption">Detailed view of laser engraving</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://github.com/user-attachments/assets/memorial-coaster-4.jpg" alt="Memorial coaster with personal message">
+                    <div class="photo-caption">Personalized message alongside QR code</div>
                 </div>
             </div>
         </div>
