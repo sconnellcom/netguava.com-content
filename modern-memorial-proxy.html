@@ -162,9 +162,9 @@
         
         /* Hero Section - Memorial Theme with Background Image */
         .hero {
-            background-image: url('https://github.com/user-attachments/assets/8358b47d-9f19-4169-9617-0e344838d1b7');
+            background-image: url('https://github.com/user-attachments/assets/4afa5858-760d-4818-ab19-42a39aeba005');
             background-size: cover;
-            background-position: center;
+            background-position: center bottom;
             padding: 8rem 2rem;
             position: relative;
         }
@@ -373,6 +373,52 @@
             color: var(--memorial-primary);
         }
         
+        /* Product example image styling */
+        .product-example {
+            max-width: 100%;
+            margin: 2rem auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .product-example img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .product-example-caption {
+            padding: 1rem;
+            background-color: var(--memorial-light);
+            text-align: center;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--memorial-secondary);
+        }
+        
+        /* Two-column layout for text + image */
+        .content-with-image {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 3rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .content-with-image {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        .content-with-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
         /* Nav caret for dropdown */
         .nav-caret {
             display: inline-block;
@@ -553,6 +599,13 @@
                 Crafted from genuine natural slate, each coaster offers a one-of-a-kind look with subtle variations in texture and color. The laser engraving permanently etches the QR code and message in crisp gray, ensuring it withstands time while directing visitors to photos, videos, and stories.
             </p>
         </div>
+        
+        <!-- Product example image -->
+        <div class="product-example">
+            <img src="https://github.com/user-attachments/assets/01513ed8-0456-4407-857f-dce9af046fea" alt="Close-up of laser-engraved memorial coaster with QR code">
+            <div class="product-example-caption">Detailed view of our laser-engraved slate memorial coaster</div>
+        </div>
+        
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon" aria-label="Natural slate icon">🪨</div>
@@ -596,7 +649,7 @@
                     <div class="feature-icon" aria-label="Checkmark">✓</div>
                     <div>
                         <h4>Complete Digital Memorial Page</h4>
-                        <p>Your QR code links to a full ModernMemorial.org page where you can share unlimited photos, videos, and life stories</p>
+                        <p>Your QR code links to a full ModernMemorial.org page where you can share photos, videos, and life stories</p>
                     </div>
                 </div>
                 <div class="feature-item">
@@ -633,6 +686,29 @@
                         <h4>Forever Access</h4>
                         <p>Permanent hosting with no expiration — your memorial page remains accessible for generations</p>
                     </div>
+                </div>
+            </div>
+            
+            <!-- Real-world usage examples -->
+            <div class="content-with-image" style="margin-top: 4rem;">
+                <div>
+                    <h3 style="color: var(--memorial-primary); margin-bottom: 1rem;">See It in Action</h3>
+                    <p style="line-height: 1.8; color: var(--text-dark);">
+                        Our memorial coasters work seamlessly on headstones, allowing visitors to instantly access cherished memories. 
+                        The QR code can be engraved directly on the headstone by your memorial creator, or added with our durable slate plaque.
+                    </p>
+                </div>
+                <img src="https://github.com/user-attachments/assets/d211eb3c-8b93-448b-b732-416434c941a1" alt="Visitor scanning QR code on memorial headstone">
+            </div>
+            
+            <div class="content-with-image" style="margin-top: 3rem;">
+                <img src="https://github.com/user-attachments/assets/e322e60f-b517-449e-8e01-cd3ab11c71a1" alt="Person accessing digital memorial via smartphone">
+                <div>
+                    <h3 style="color: var(--memorial-primary); margin-bottom: 1rem;">Connect Instantly</h3>
+                    <p style="line-height: 1.8; color: var(--text-dark);">
+                        A simple scan brings loved ones to a beautiful digital memorial page filled with photos, videos, and stories. 
+                        It's a meaningful way to keep their memory alive for generations to come.
+                    </p>
                 </div>
             </div>
         </div>
