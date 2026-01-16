@@ -373,49 +373,50 @@
             color: var(--memorial-primary);
         }
         
-        /* Photo Gallery Section */
-        .photo-gallery {
-            background-color: var(--bg-white);
-            padding: 5rem 2rem;
-        }
-        
-        .photo-gallery-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .photo-item {
+        /* Product example image styling */
+        .product-example {
+            max-width: 100%;
+            margin: 2rem auto;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         
-        .photo-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-        }
-        
-        .photo-item img {
+        .product-example img {
             width: 100%;
-            height: 300px;
-            object-fit: cover;
+            height: auto;
             display: block;
         }
         
-        .photo-caption {
+        .product-example-caption {
             padding: 1rem;
             background-color: var(--memorial-light);
             text-align: center;
-            font-size: 0.95rem;
-            color: var(--memorial-primary);
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--memorial-secondary);
+        }
+        
+        /* Two-column layout for text + image */
+        .content-with-image {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 3rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .content-with-image {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        .content-with-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         
         /* Nav caret for dropdown */
@@ -598,6 +599,13 @@
                 Crafted from genuine natural slate, each coaster offers a one-of-a-kind look with subtle variations in texture and color. The laser engraving permanently etches the QR code and message in crisp gray, ensuring it withstands time while directing visitors to photos, videos, and stories.
             </p>
         </div>
+        
+        <!-- Product example image -->
+        <div class="product-example">
+            <img src="https://github.com/user-attachments/assets/01513ed8-0456-4407-857f-dce9af046fea" alt="Close-up of laser-engraved memorial coaster with QR code">
+            <div class="product-example-caption">Detailed view of our laser-engraved slate memorial coaster</div>
+        </div>
+        
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon" aria-label="Natural slate icon">🪨</div>
@@ -680,29 +688,27 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Photo Gallery Section -->
-    <section class="photo-gallery" id="gallery">
-        <div class="photo-gallery-content">
-            <h2 class="section-title">See Our Memorial Coasters</h2>
-            <div class="photo-grid">
-                <div class="photo-item">
-                    <img src="https://github.com/user-attachments/assets/8849c825-d9ab-43ff-b429-5c0cb6470afe" alt="Memorial coaster with QR code on headstone">
-                    <div class="photo-caption">Slate coaster with QR code on memorial headstone</div>
+            
+            <!-- Real-world usage examples -->
+            <div class="content-with-image" style="margin-top: 4rem;">
+                <div>
+                    <h3 style="color: var(--memorial-primary); margin-bottom: 1rem;">See It in Action</h3>
+                    <p style="line-height: 1.8; color: var(--text-dark);">
+                        Our memorial coasters work seamlessly on headstones, allowing visitors to instantly access cherished memories. 
+                        The QR code can be engraved directly on the headstone by your memorial creator, or added with our durable slate plaque.
+                    </p>
                 </div>
-                <div class="photo-item">
-                    <img src="https://github.com/user-attachments/assets/01513ed8-0456-4407-857f-dce9af046fea" alt="Close-up of engraved memorial coaster">
-                    <div class="photo-caption">Detailed view of laser-engraved memorial coaster</div>
-                </div>
-                <div class="photo-item">
-                    <img src="https://github.com/user-attachments/assets/d211eb3c-8b93-448b-b732-416434c941a1" alt="QR code engraved directly on headstone">
-                    <div class="photo-caption">QR code engraved directly on headstone</div>
-                </div>
-                <div class="photo-item">
-                    <img src="https://github.com/user-attachments/assets/e322e60f-b517-449e-8e01-cd3ab11c71a1" alt="Visitor scanning QR code on memorial">
-                    <div class="photo-caption">Visitor accessing digital memorial via QR code</div>
+                <img src="https://github.com/user-attachments/assets/d211eb3c-8b93-448b-b732-416434c941a1" alt="Visitor scanning QR code on memorial headstone">
+            </div>
+            
+            <div class="content-with-image" style="margin-top: 3rem;">
+                <img src="https://github.com/user-attachments/assets/e322e60f-b517-449e-8e01-cd3ab11c71a1" alt="Person accessing digital memorial via smartphone">
+                <div>
+                    <h3 style="color: var(--memorial-primary); margin-bottom: 1rem;">Connect Instantly</h3>
+                    <p style="line-height: 1.8; color: var(--text-dark);">
+                        A simple scan brings loved ones to a beautiful digital memorial page filled with photos, videos, and stories. 
+                        It's a meaningful way to keep their memory alive for generations to come.
+                    </p>
                 </div>
             </div>
         </div>
