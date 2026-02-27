@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom 3D Printed Electric Cellos | Vertex Luthier</title>
-    <meta name="description" content="Vertex Luthier crafts one-of-a-kind custom 3D printed electric cellos. From dragons to puppies — any style, sculpted and integrated into your instrument.">
+    <meta name="description" content="Vertex Luthier crafts one-of-a-kind custom 3D printed electric cellos. From dragons to puppies, any style, sculpted and integrated into your instrument.">
 
     <!-- External Netguava Styles -->
     <link rel="stylesheet" href="https://netguava.com/wp-content/themes/netguava/css/bootstrap-optimized.css?ver=0.1" type="text/css" media="all" />
@@ -415,51 +415,63 @@
             line-height: 1.6;
         }
 
-        /* ── Features Section ── */
-        .features-section {
-            background-color: var(--bg-light);
+        /* ── Highlight Section ── */
+        .highlight-section {
+            background-color: #fff;
             padding: 5rem 2rem;
         }
 
-        .features-inner {
-            max-width: 1200px;
+        .highlight-inner {
+            max-width: 1100px;
             margin: 0 auto;
-        }
-
-        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
 
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.1rem;
-            background: #fff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-        }
-
-        .feature-icon {
-            font-size: 1.9rem;
-            flex-shrink: 0;
-            margin-top: 0.1rem;
-        }
-
-        .feature-item h4 {
+        .highlight-text h2 {
             color: var(--vl-secondary);
-            font-weight: 700;
-            margin-bottom: 0.4rem;
-            font-size: 1.05rem;
+            font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
         }
 
-        .feature-item p {
+        .highlight-text p {
             color: var(--text-dark);
-            line-height: 1.7;
-            font-size: 0.97rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .highlight-image {
+            background: linear-gradient(135deg, var(--vl-secondary) 0%, var(--vl-accent) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 320px;
+            box-shadow: 0 8px 32px rgba(106, 13, 173, 0.3);
+        }
+
+        .highlight-image-icon {
+            font-size: 8rem;
+            line-height: 1;
+        }
+
+        @media (max-width: 768px) {
+            .highlight-inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .highlight-image {
+                min-height: 220px;
+            }
+
+            .highlight-image-icon {
+                font-size: 5rem;
+            }
         }
 
         /* ── Testimonials ── */
@@ -662,7 +674,7 @@
         <div class="hero-content">
             <h1>Your Imagination.<br><span class="accent-word">Your Cello.</span></h1>
             <p class="hero-tagline">Custom 3D Printed Electric Cellos by Vertex Luthier</p>
-            <p>We sculpt 3D models to match any theme — from fire-breathing dragons to your favorite puppy — and integrate them into a fully functional, professional-grade electric cello built just for you.</p>
+            <p>We sculpt 3D models to match any theme, from fire-breathing dragons to your favorite puppy, and integrate them into a fully functional, professional-grade electric cello built just for you.</p>
             <a href="https://netguava.com/contact" class="cta-button">Design Your Cello</a>
         </div>
     </section>
@@ -672,12 +684,12 @@
         <div class="process-content">
             <h2 class="section-title">How It Works</h2>
             <p class="process-intro">
-                Every Vertex Luthier cello starts with your vision. Our designers work closely with you through every step — from the first sketch to the final performance.
+                Every Vertex Luthier cello starts with your vision. Noah Connell works closely with you through every step, from the first sketch to the final performance.
             </p>
             <div class="steps-grid">
                 <div class="step-card">
                     <h3>Tell Us Your Theme</h3>
-                    <p>Share your concept — dragons, cosmic landscapes, wildlife, fantasy, or anything else you dream up. No idea is too bold.</p>
+                    <p>Share your concept: dragons, cosmic landscapes, wildlife, fantasy, or anything else you dream up. No idea is too bold.</p>
                 </div>
                 <div class="step-card">
                     <h3>3D Sculpting</h3>
@@ -704,13 +716,13 @@
         <div class="themes-content">
             <h2 class="section-title">Any Style. Any Theme.</h2>
             <p class="themes-subtitle">
-                Whatever you can imagine, we can sculpt. Here's just a taste of what we've crafted — and what we can create for you.
+                Whatever you can imagine, we can sculpt. Here is just a taste of what we have crafted, and what we can create for you.
             </p>
             <div class="themes-grid">
                 <div class="theme-card">
                     <span class="theme-emoji" aria-label="Dragon">🐉</span>
                     <h3>Fantasy Creatures</h3>
-                    <p>Dragons, phoenixes, griffins — mythical beasts come alive on your instrument.</p>
+                    <p>Dragons, phoenixes, griffins: mythical beasts come alive on your instrument.</p>
                 </div>
                 <div class="theme-card">
                     <span class="theme-emoji" aria-label="Dog">🐶</span>
@@ -725,7 +737,7 @@
                 <div class="theme-card">
                     <span class="theme-emoji" aria-label="Forest">🌿</span>
                     <h3>Nature &amp; Botanical</h3>
-                    <p>Flowing vines, ancient trees, forest spirits — organic beauty in every curve.</p>
+                    <p>Flowing vines, ancient trees, forest spirits: organic beauty in every curve.</p>
                 </div>
                 <div class="theme-card">
                     <span class="theme-emoji" aria-label="Skull">💀</span>
@@ -735,59 +747,21 @@
                 <div class="theme-card">
                     <span class="theme-emoji" aria-label="Palette">🎨</span>
                     <h3>Fully Custom</h3>
-                    <p>Have something unique in mind? We'll sculpt it from scratch — just for you.</p>
+                    <p>Have something unique in mind? We will sculpt it from scratch, just for you.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section" id="features">
-        <div class="features-inner">
-            <h2 class="section-title">Why Vertex Luthier?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon" aria-label="3D print icon">🖨️</div>
-                    <div>
-                        <h4>True Custom 3D Sculpting</h4>
-                        <p>Every design is sculpted from scratch by our artists. No templates, no shortcuts — your cello is entirely one-of-a-kind.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon" aria-label="Music note">🎻</div>
-                    <div>
-                        <h4>Professional Sound Quality</h4>
-                        <p>Custom aesthetics never come at the expense of sound. Our cellos are built and set up to professional performance standards.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon" aria-label="Checkmark">✅</div>
-                    <div>
-                        <h4>Integrated Design</h4>
-                        <p>Sculptures are engineered into the instrument body — not just glued on. The result is structurally sound and visually stunning.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon" aria-label="Collaborate icon">🤝</div>
-                    <div>
-                        <h4>Collaborative Process</h4>
-                        <p>You're involved at every step. We refine the design with you until it's exactly right before we ever start printing.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon" aria-label="Electric bolt">⚡</div>
-                    <div>
-                        <h4>Electric Performance Ready</h4>
-                        <p>Full electric cello functionality with pickup and output — perfect for live performance, studio recording, or practice.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon" aria-label="Gift box">🎁</div>
-                    <div>
-                        <h4>The Ultimate Gift</h4>
-                        <p>A truly personal instrument makes an extraordinary gift for the musician in your life — unlike anything they've ever received.</p>
-                    </div>
-                </div>
+    <!-- Highlight Section -->
+    <section class="highlight-section" id="gift">
+        <div class="highlight-inner">
+            <div class="highlight-text">
+                <h2>The Ultimate Gift</h2>
+                <p>A truly personal instrument makes an extraordinary gift for the musician in your life, unlike anything they have ever received.</p>
+            </div>
+            <div class="highlight-image">
+                <span class="highlight-image-icon" aria-label="Gift">🎁</span>
             </div>
         </div>
     </section>
@@ -798,16 +772,8 @@
             <h2 class="section-title">What Our Players Say</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"I asked for a dragon coiling around the body of my cello and they absolutely nailed it. Every rehearsal someone asks about my instrument. It plays beautifully too."</p>
-                    <p class="testimonial-author">— Mara T., professional cellist</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"They sculpted my late dog into the scroll of my cello. The detail is incredible and now he's with me every time I play. I can't recommend Vertex Luthier enough."</p>
-                    <p class="testimonial-author">— James W., performing musician</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"I wanted a cosmic ocean theme and the team worked through several revisions until it was perfect. The final result is a functional piece of art."</p>
-                    <p class="testimonial-author">— Asha K., composer</p>
+                    <p class="testimonial-text">"I am very happy with the Wavy Cello that Noah created for me based on my inspiration photos."</p>
+                    <p class="testimonial-author">Cora</p>
                 </div>
             </div>
         </div>
