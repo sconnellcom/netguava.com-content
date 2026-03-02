@@ -28,5 +28,15 @@
     "wp_slug": "/modern-memorial-proxy",
     "source_path": "/modern-memorial-proxy.html",
     "proxy": true
+  },
+  {
+    "wp_slug": "/vertex-luthier",
+    "source_path": "/vertex-luthier.html",
+    "proxy": false
+  },
+  {
+    "wp_slug": "/vertex-luthier-proxy",
+    "source_path": "/vertex-luthier-proxy.html",
+    "proxy": true
   }
 ]
