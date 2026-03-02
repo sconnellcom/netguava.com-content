@@ -222,12 +222,47 @@
             pointer-events: none;
         }
 
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 680px;
             text-align: left;
-            margin: 0;
+        }
+
+        .hero-photo {
+            position: relative;
+            min-height: 500px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: url('https://vertexluthier.com/ElectricLightningCello.jpg') center/cover no-repeat;
+        }
+
+        .hero-photo::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(13, 1, 24, 0.30);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, #1a0533 0%, rgba(26, 5, 51, 0.5) 30%, transparent 70%);
+            z-index: 2;
+            pointer-events: none;
         }
 
         .hero h1 {
@@ -445,18 +480,20 @@
         }
 
         .highlight-image {
-            background: linear-gradient(135deg, var(--vl-secondary) 0%, var(--vl-accent) 100%);
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 320px;
-            box-shadow: 0 8px 32px rgba(106, 13, 173, 0.3);
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(106, 13, 173, 0.15);
         }
 
-        .highlight-image-icon {
-            font-size: 8rem;
-            line-height: 1;
+        .highlight-cello-img {
+            max-width: 440px;
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
         }
 
         @media (max-width: 768px) {
@@ -600,10 +637,38 @@
             box-shadow: 0 8px 28px rgba(0,0,0,0.3);
         }
 
+        /* ── VL Logo in nav and footer ── */
+        .vl-nav-logo {
+            height: 36px;
+            width: auto;
+            margin-left: 1.5rem;
+            vertical-align: middle;
+        }
+
+        .vl-footer-brand {
+            background: var(--vl-dark);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            border-top: 2px solid var(--vl-secondary);
+        }
+
+        .vl-footer-brand-logo {
+            height: 48px;
+            width: auto;
+        }
+
         /* ── Responsive ── */
         @media (max-width: 768px) {
             .hero {
                 padding: 5rem 1.5rem;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-photo {
+                display: none;
             }
         }
     </style>
@@ -629,6 +694,8 @@
   </g>
 </svg>
         </a>
+
+        <img src="https://vertexluthier.com/VertexLuthier-Icon.png" alt="Vertex Luthier" class="vl-nav-logo">
 
         <ul class="nav-left hidden-xs hidden-sm">
           <li class="dropdown">
@@ -724,11 +791,14 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Your Imagination.<br><span class="accent-word">Your Cello.</span></h1>
-            <p class="hero-tagline">Custom 3D Printed Electric Cellos by Vertex Luthier Noah Connell</p>
-            <p>We sculpt 3D models to match any theme, from fire-breathing dragons to your favorite puppy, and integrate them into a fully functional, professional-grade electric cello built just for you.</p>
-            <a href="https://netguava.com/contact" class="cta-button">Design Your Cello</a>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1>Your Imagination.<br><span class="accent-word">Your Cello.</span></h1>
+                <p class="hero-tagline">Custom 3D Printed Electric Cellos by Vertex Luthier Noah Connell</p>
+                <p>We sculpt 3D models to match any theme, from fire-breathing dragons to your favorite puppy, and integrate them into a fully functional, professional-grade electric cello built just for you.</p>
+                <a href="https://netguava.com/contact" class="cta-button">Design Your Cello</a>
+            </div>
+            <div class="hero-photo" role="img" aria-label="Custom electric lightning cello by Vertex Luthier"></div>
         </div>
     </section>
 
@@ -814,7 +884,7 @@
                 <p>A truly personal instrument makes an extraordinary gift for the musician in your life, unlike anything they have ever received.</p>
             </div>
             <div class="highlight-image">
-                <span class="highlight-image-icon" aria-label="Gift">🎁</span>
+                <img src="https://vertexluthier.com/Wavy-Cello.jpg" alt="The Wavy Cello, a custom 3D printed electric cello by Vertex Luthier Noah Connell" class="highlight-cello-img">
             </div>
         </div>
     </section>
@@ -866,6 +936,9 @@
 
     <!-- Footer (from netguava.com) -->
     <footer class="footer site-footer" role="contentinfo">
+      <div class="vl-footer-brand">
+          <img src="https://vertexluthier.com/VertexLuthier-Icon.png" alt="Vertex Luthier" class="vl-footer-brand-logo">
+      </div>
       <div class="tag-line"><img src="https://netguava.com/wp-content/themes/netguava/images/stephen-headshot.jpg" alt="Photo of Stephen" /> Need Help? &nbsp; Give us a call at <a href="tel:18008618784">(800) 861-8784</a></div>
       <div class="bottom-menu">
         <div class="container">
