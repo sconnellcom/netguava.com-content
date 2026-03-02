@@ -337,6 +337,59 @@
             color: var(--vl-secondary);
         }
 
+        /* ── Shipping Section ── */
+        .shipping-section {
+            background-color: var(--bg-light);
+            padding: 5rem 2rem;
+        }
+
+        .shipping-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .shipping-intro {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-top: 0.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .shipping-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .shipping-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 2.2rem 1.8rem;
+            box-shadow: 0 3px 10px rgba(106, 13, 173, 0.08);
+            text-align: center;
+        }
+
+        .shipping-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .shipping-card h3 {
+            color: var(--vl-secondary);
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .shipping-card p {
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 0.97rem;
+        }
+
         /* ── CTA Section ── */
         .cta-section {
             background: linear-gradient(135deg, var(--vl-secondary) 0%, var(--vl-accent) 100%);
@@ -397,7 +450,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Your Imagination.<br><span class="accent-word">Your Cello.</span></h1>
-            <p class="hero-tagline">Custom 3D Printed Electric Cellos by Vertex Luthier</p>
+            <p class="hero-tagline">Custom 3D Printed Electric Cellos by Vertex Luthier Noah Connell</p>
             <p>We sculpt 3D models to match any theme, from fire-breathing dragons to your favorite puppy, and integrate them into a fully functional, professional-grade electric cello built just for you.</p>
             <a href="https://netguava.com/contact" class="cta-button">Design Your Cello</a>
         </div>
@@ -498,6 +551,26 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">"I am very happy with the Wavy Cello that Noah created for me based on my inspiration photos."</p>
                     <p class="testimonial-author">Cora</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping Section -->
+    <section class="shipping-section" id="shipping">
+        <div class="shipping-inner">
+            <h2 class="section-title">Tuned and Ready to Play</h2>
+            <p class="shipping-intro">Every cello is tuned and tested before it leaves the workshop.</p>
+            <div class="shipping-grid">
+                <div class="shipping-card">
+                    <span class="shipping-icon" aria-label="Location pin">📍</span>
+                    <h3>Local Pickup</h3>
+                    <p>Pick it up ready to play in Sarasota, FL.</p>
+                </div>
+                <div class="shipping-card">
+                    <span class="shipping-icon" aria-label="Package">📦</span>
+                    <h3>Ships to You</h3>
+                    <p>We detune the cello for shipping. Press the upper bouts into place, attach the lower bout with 2 screws, tune the cello and you are ready to play.</p>
                 </div>
             </div>
         </div>
