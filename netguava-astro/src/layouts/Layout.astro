@@ -1,0 +1,71 @@
+---
+import Header from '../components/Header.html?raw';
+import Footer from '../components/Footer.html?raw';
+
+interface Props {
+  title: string;
+  description?: string;
+  robots?: string;
+  ogImage?: string;
+  bodyClass?: string;
+  styles?: string[];
+  inlineStyles?: string[];
+  articleId?: string;
+  articleClass?: string;
+}
+
+const {
+  title,
+  description = '',
+  robots = '',
+  ogImage = '',
+  bodyClass = '',
+  styles = [],
+  inlineStyles = [],
+  articleId = '',
+  articleClass = '',
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+---
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {robots && <meta name="robots" content={robots} />}
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Netguava, Inc." />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="stylesheet" href="/css/wp-inline.css" />
+    {styles.map((href) => <link rel="stylesheet" href={href} />)}
+    <link rel="stylesheet" href="/css/site.css" />
+    {inlineStyles.map((css) => <style is:inline set:html={css} />)}
+  </head>
+  <body class={bodyClass}>
+    <div id="page" class="site">
+      <Fragment set:html={Header} />
+      <div id="content" class="site-content">
+        <main id="main" class="site-main" role="main">
+          <article id={articleId || undefined} class={articleClass}>
+            <div class="entry-content">
+              <slot />
+            </div>
+          </article>
+        </main>
+      </div>
+      <Fragment set:html={Footer} />
+    </div>
+    <script is:inline src="/js/site.js" defer></script>
+  </body>
+</html>

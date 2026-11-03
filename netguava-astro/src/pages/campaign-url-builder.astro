@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import pages from '../data/pages.json';
+
+const page = pages.find((p) => p.slug === 'campaign-url-builder')!;
+---
+<Layout {...page}>
+  <div class="main">
+    <section class="content">
+      <div class="container campaign-form">
+        <p>
+          By adding campaign parameters to the destination URLs you use in your ad campaigns, you can collect information about the overall efficacy of those campaigns, and also understand where the campaigns are more effective. For example, your Summer Sale campaign might be generating lots of revenue, but if you're running the campaign in several different social apps, you want to know which of them is sending you the customers who generate the most revenue. Or if you're running different versions of the campaign via email, video ads, and in-app ads, you can compare the results to see where your marketing is most effective.
+        </p>
+        <h2 class="step">1) Create Campaign URL</h2>
+        <div class="field">
+          <div><h3>Landing Page URL</h3><p></p></div>
+          <input id="field-landing-page-url" placeholder="https://www.example.com/page" type="text" />
+        </div>
+        <div class="field">
+          <div>
+            <h3>Campaign Source</h3>
+            <p>Identify the advertiser, site, publication, etc. that is sending traffic to your property, for example: google, newsletter4, billboard.</p>
+          </div>
+          <input id="field-campaign-source" type="text" />
+        </div>
+        <div class="field">
+          <div>
+            <h3>Campaign Medium</h3>
+            <p>The advertising or marketing medium.</p>
+          </div>
+          <div class="campaign-medium">
+            <label><input name="campaign_medium" type="radio" value="email" /> Email</label>
+            <label><input name="campaign_medium" type="radio" value="display" /> Display</label>
+            <label><input name="campaign_medium" type="radio" value="cpc" /> CPC</label>
+            <label><input name="campaign_medium" type="radio" value="social" /> Social</label>
+            <label><input name="campaign_medium" type="radio" value="sms" /> Text Message</label>
+          </div>
+        </div>
+        <div class="field">
+          <div>
+            <h3>Campaign Name</h3>
+            <p>The individual campaign name, slogan, promo code, etc. for a product.</p>
+          </div>
+          <input id="field-campaign-name" placeholder="October2026" type="text" />
+        </div>
+        <h2 class="step">2) Copy Campaign URL</h2>
+        <div class="field">
+          <textarea id="output"></textarea>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script is:inline>
+    (function () {
+      var output = document.getElementById('output');
+      var pageUrl = document.getElementById('field-landing-page-url');
+      var source = document.getElementById('field-campaign-source');
+      var name = document.getElementById('field-campaign-name');
+      function clean(v) {
+        return encodeURIComponent(v.trim().replace(/\s/g, '-'));
+      }
+      function refresh() {
+        var parts = pageUrl.value.split('#');
+        var result = parts[0].trim().replace(/\s/g, '-');
+        var hash = parts.length > 1 ? parts[1] : '';
+        var medium = document.querySelector('.campaign-medium input:checked');
+        function add(key, val) {
+          if (!val) return;
+          result += (result.indexOf('?') < 0 ? '?' : '&') + key + '=' + clean(val);
+        }
+        add('utm_source', source.value);
+        add('utm_medium', medium ? medium.value : '');
+        add('utm_campaign', name.value);
+        if (hash) result += '#' + hash;
+        output.value = result;
+      }
+      document.querySelectorAll('.field input').forEach(function (el) {
+        el.addEventListener('change', refresh);
+        el.addEventListener('keyup', refresh);
+      });
+    })();
+  </script>
+</Layout>
