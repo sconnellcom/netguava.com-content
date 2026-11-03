@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import pages from '../data/pages.json';
+
+export function getStaticPaths() {
+  const fragments = import.meta.glob('../content/*.html', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+  return pages
+    .filter((p) => p.hasContent)
+    .map((p) => {
+      const file = `../content/${p.slug.replace(/\//g, '__') || 'home'}.html`;
+      return {
+        params: { slug: p.slug || undefined },
+        props: { page: p, html: fragments[file] },
+      };
+    });
+}
+
+const { page, html } = Astro.props;
+---
+<Layout {...page}>
+  <Fragment set:html={html} />
+</Layout>
