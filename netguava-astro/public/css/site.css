@@ -1,5 +1,11 @@
 /* Supplements for behaviour previously provided by WordPress plugins/JS */
 
+.navigation-header .nav-right > .dropdown > .sub-menu {
+  left: auto;
+  right: 0;
+  max-width: calc(100vw - 64px);
+}
+
 /* Parallax rows: image comes from the --bg custom property */
 [data-parallax-image] > .fl-row-content-wrap {
   background-image: var(--bg);
@@ -28,6 +34,31 @@
 /* Accordion */
 .fl-accordion-content { display: none; }
 .fl-accordion-item-active > .fl-accordion-content { display: block; }
+
+/* Marketing detail icons should not inherit the callout's 50/50 column split. */
+@media (min-width: 769px) {
+  .the-details-row .fl-callout-photo-left .fl-callout-photo {
+    width: 100px;
+  }
+  .the-details-row .fl-callout-photo-left .fl-callout-content {
+    width: auto;
+    padding-left: 0;
+  }
+}
+
+.fl-builder-content-92 .intro-banner .fl-embed-video iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+}
+
+/* "Where Do I Start?" transparent button: Beaver Builder's global
+   `.fl-builder-content .fl-button:is(a,button) *` rule paints the inner
+   .fl-button-text span #333, which is unreadable on the dark row background.
+   The theme only colors the anchor, so restore white on the span itself. */
+.page .rounded-transparent-btn a.fl-button .fl-button-text { color: #fff; }
 
 /* Portfolio filters */
 .fl-module-isotope .filters li { cursor: pointer; }
