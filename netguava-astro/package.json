@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "test": "node --test tests/contact.test.mjs",
+    "test:php": "node --test tests/contact-endpoint.test.mjs"
   },
   "dependencies": {
     "astro": "^7.4.5"

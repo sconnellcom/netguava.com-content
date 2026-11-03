@@ -752,20 +752,21 @@ and Alerts</p>
 <div class="fl-module-content fl-node-content">
 <div class="fl-rich-text">
 <p>
-</p><div class="gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework" data-form-index="0" data-form-theme="legacy" id="gform_wrapper_2"><div class="gform_anchor" id="gf_2" tabindex="-1"></div><form action="#" data-placeholder-form="gform_2" id="gform_2" method="post">
+</p><div class="gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework" data-form-index="0" data-form-theme="legacy" id="gform_wrapper_2"><div class="gform_anchor" id="gf_2" tabindex="-1"></div><form action="/send-contact.php" data-contact-form="" enctype="multipart/form-data" id="gform_2" method="post">
+<input name="form_id" type="hidden" value="gform_2"/>
 <div class="gform-body gform_body"><ul class="gform_fields top_label form_sublabel_below description_below validation_below" id="gform_fields_2"><li class="gfield gfield--type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible" id="field_2_5"><div class="ginput_container ginput_container_text"><input aria-invalid="false" class="gform_hidden" id="input_2_5" name="input_5" type="hidden" value="WordPress Support"/></div></li><li class="gfield gfield--type-text gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible" id="field_2_1"><label class="gfield_label gform-field-label" for="input_2_1"><span class="gform-field-label__text">Name</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class="ginput_container ginput_container_text"><input aria-invalid="false" aria-required="true" class="large" id="input_2_1" name="input_1" placeholder="Your Name" required="" type="text" value=""/></div></li><li class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible" id="field_2_2"><label class="gfield_label gform-field-label" for="input_2_2"><span class="gform-field-label__text">Email</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class="ginput_container ginput_container_email">
 <input aria-invalid="false" aria-required="true" class="large" id="input_2_2" name="input_2" placeholder="Your Email" required="" type="email" value=""/>
 </div></li><li class="gfield gfield--type-textarea gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible" id="field_2_3"><label class="gfield_label gform-field-label" for="input_2_3"><span class="gform-field-label__text">Message</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class="ginput_container ginput_container_textarea"><textarea aria-invalid="false" aria-required="true" class="textarea large" cols="50" id="input_2_3" name="input_3" placeholder="What's your current website address? How can we help you?" required="" rows="10"></textarea></div></li><li class="gfield gfield--type-radio gfield--type-choice radio-plans gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible gfield--choice-align-vertical" id="field_2_4"><label class="gfield_label gform-field-label"><span class="gform-field-label__text">Plan</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class="ginput_container ginput_container_radio"><ul class="gfield_radio" id="input_2_4">
 <li class="gchoice gchoice_2_4_0">
-<input id="choice_2_4_0" name="input_4" type="radio" value="Essentials"/>
+<input id="choice_2_4_0" name="input_4" required="" type="radio" value="Essentials"/>
 <label class="gform-field-label gform-field-label--type-inline" for="choice_2_4_0" id="label_2_4_0">Essentials</label>
 </li>
 <li class="gchoice gchoice_2_4_1">
-<input id="choice_2_4_1" name="input_4" type="radio" value="Professional"/>
+<input id="choice_2_4_1" name="input_4" required="" type="radio" value="Professional"/>
 <label class="gform-field-label gform-field-label--type-inline" for="choice_2_4_1" id="label_2_4_1">Professional</label>
 </li>
 <li class="gchoice gchoice_2_4_2">
-<input id="choice_2_4_2" name="input_4" type="radio" value="Premium"/>
+<input id="choice_2_4_2" name="input_4" required="" type="radio" value="Premium"/>
 <label class="gform-field-label gform-field-label--type-inline" for="choice_2_4_2" id="label_2_4_2">Premium</label>
 </li></ul></div></li></ul></div>
 <div class="gform-footer gform_footer top_label"> <button class="gform_button button" data-submission-type="submit" id="gform_submit_button_2" type="submit">Send</button> 
@@ -782,7 +783,7 @@ and Alerts</p>
 
 </div>
 <p class="akismet-fields-container" data-prefix="ak_" style="display: none !important;"><label>Δ<textarea cols="45" maxlength="100" name="ak_hp_textarea" rows="8"></textarea></label><input id="ak_js_1" name="ak_js" type="hidden" value="102"/>
-</p><p class="form-placeholder-note" hidden="" role="status">Thanks! This form isn't connected yet. Please call (800) 861-8784 in the meantime.</p></form>
+</p><p aria-live="polite" class="form-status" hidden="" role="status"></p></form>
 </div>
 
 

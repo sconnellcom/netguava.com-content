@@ -64,8 +64,10 @@
 .fl-module-isotope .filters li { cursor: pointer; }
 .fl-module-isotope .grid-item.is-hidden { display: none; }
 
-/* Placeholder forms */
-.form-placeholder-note {
+/* Contact form feedback */
+.form-status {
   margin-top: 16px; padding: 12px 16px; border-radius: 4px;
   background: rgba(30, 150, 90, .12); color: inherit;
 }
+.form-status[data-state="error"] { background: rgba(190, 40, 40, .12); }
+form[aria-busy="true"] [type="submit"] { opacity: .65; cursor: wait; }

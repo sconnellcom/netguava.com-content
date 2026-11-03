@@ -209,12 +209,62 @@
     resize();
   }
 
-  /* Placeholder forms: no endpoint yet, so show a notice instead of submitting */
-  $$('form[data-placeholder-form]').forEach(function (form) {
-    form.addEventListener('submit', function (e) {
+  /* Contact forms */
+  $$('form[data-contact-form]').forEach(function (form) {
+    var pending = false;
+    var note = $('.form-status', form);
+    var upload = $('input[type=file]', form);
+    function validateUpload() {
+      if (upload) {
+        upload.setCustomValidity(upload.files.length && upload.files[0].size > 8388608
+          ? 'Please choose a file no larger than 8 MB.' : '');
+      }
+    }
+    if (upload) upload.addEventListener('change', validateUpload);
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      var note = $('.form-placeholder-note', form);
-      if (note) note.hidden = false;
+      if (pending) return;
+      validateUpload();
+      if (!form.reportValidity()) return;
+      var buttons = $$('[type=submit]', form);
+      var disabled = buttons.map(function (button) { return button.disabled; });
+      var data = new FormData(form);
+      data.set('source_page', window.location.pathname);
+      pending = true;
+      buttons.forEach(function (button) { button.disabled = true; });
+      form.setAttribute('aria-busy', 'true');
+      note.hidden = false;
+      note.dataset.state = 'pending';
+      note.textContent = 'Sending your message...';
+      try {
+        var response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' }
+        });
+        var result;
+        try {
+          result = await response.json();
+        } catch (error) {
+          throw new Error('The form service returned an unexpected response. Please call (800) 861-8784 or try again later.');
+        }
+        if (!response.ok || !result || result.ok !== true) {
+          throw new Error(result && typeof result.error === 'string' ? result.error
+            : 'Your message could not be sent. Please call (800) 861-8784 or try again later.');
+        }
+        form.reset();
+        $$('.plan-text', form).forEach(function (text) { text.textContent = ''; });
+        note.dataset.state = 'success';
+        note.textContent = 'Thanks! Your message has been sent. We will be in touch soon.';
+      } catch (error) {
+        note.dataset.state = 'error';
+        note.textContent = error instanceof Error ? error.message
+          : 'Unable to send your message. Please call (800) 861-8784 or try again later.';
+      } finally {
+        pending = false;
+        buttons.forEach(function (button, index) { button.disabled = disabled[index]; });
+        form.removeAttribute('aria-busy');
+      }
     });
   });
 })();

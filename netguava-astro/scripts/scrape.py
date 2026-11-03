@@ -125,9 +125,10 @@ def convert_form(soup: BeautifulSoup, wrapper) -> None:
     form = wrapper.find("form")
     if form is None:
         return
-    form["action"] = "#"
+    form["action"] = "/send-contact.php"
     form["method"] = "post"
-    form["data-placeholder-form"] = form.get("id", "form")
+    form["data-contact-form"] = ""
+    form.attrs.pop("data-placeholder-form", None)
     for attr in ("target", "novalidate", "data-formid", "enctype"):
         form.attrs.pop(attr, None)
     for el in form.select("input[type=hidden]"):
@@ -136,13 +137,23 @@ def convert_form(soup: BeautifulSoup, wrapper) -> None:
             el.decompose()
     for el in form.select(".gform_validation_container, .gform_ajax_spinner"):
         el.decompose()
+    form["enctype"] = "multipart/form-data"
+    form.append(soup.new_tag("input", attrs={
+        "type": "hidden", "name": "form_id", "value": form.get("id", "")
+    }))
     for el in form.select("[aria-required=true]"):
         el["required"] = ""
-    for el in form.select("[onclick], [onkeypress]"):
+    for el in form.select(".gfield_contains_required input[type=radio]"):
+        el["required"] = ""
+    for el in form.select("[onclick], [onkeypress], [onchange]"):
         el.attrs.pop("onclick", None)
         el.attrs.pop("onkeypress", None)
-    note = soup.new_tag("p", attrs={"class": "form-placeholder-note", "hidden": "", "role": "status"})
-    note.string = "Thanks! This form isn't connected yet. Please call (800) 861-8784 in the meantime."
+        el.attrs.pop("onchange", None)
+    for el in form.select(".form-placeholder-note, .form-status"):
+        el.decompose()
+    note = soup.new_tag("p", attrs={
+        "class": "form-status", "hidden": "", "role": "status", "aria-live": "polite"
+    })
     form.append(note)
 
 
